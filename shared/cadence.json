@@ -1,0 +1,42 @@
+{
+  "earthquakes": [
+    "Event-driven catalogue updates",
+    "تحديثات فهرس مع ورود الأحداث"
+  ],
+  "oil": [
+    "Per processed Sentinel-1 acquisition",
+    "مع كل مشهد معالَج من سنتينل-1"
+  ],
+  "fires": [
+    "Near-real-time satellite overpasses",
+    "مع مرور القمر الصناعي، قرب الزمن الحقيقي"
+  ],
+  "volcanoes": ["GVP database releases", "إصدارات قاعدة بيانات GVP"],
+  "floods": ["Event and episode updates", "تحديثات الأحداث ومراحلها"],
+  "seismic": ["Published model edition", "إصدار النموذج المنشور"],
+  "flaring": ["Annual inventory", "جرد سنوي"],
+  "air": [
+    "Hourly CAMS model fields, sampled daily",
+    "حقول CAMS ساعية، مع عينات يومية"
+  ],
+  "flights": [
+    "Latest OpenSky coverage, polled every 5 min",
+    "أحدث تغطية OpenSky، استعلام كل ٥ دقائق"
+  ],
+  "vessels": [
+    "Historical 2015–2021 reference edition",
+    "إصدار مرجعي تاريخي ٢٠١٥–٢٠٢١"
+  ],
+  "portcalls": ["Daily port activity, published with a lag", "حركة الموانئ اليومية بتأخير النشر"],
+  "infrastructure": ["WPI port edition · WRI 2021 · SWPC 2024 (research)", "جرد الموانئ · الطاقة ٢٠٢١ · التحلية ٢٠٢٤ (بحثي)"],
+  "marine": ["Daily regional station series", "سلاسل يومية للمحطات الإقليمية"],
+  "subsidence": [
+    "Published multi-year InSAR analysis",
+    "تحليل راداري منشور لعدة سنوات"
+  ],
+  "discharge": ["Daily GloFAS model values", "قيم نموذج GloFAS اليومية"],
+  "stations": [
+    "Station-specific measurement intervals",
+    "فترات قياس خاصة بكل محطة"
+  ]
+}

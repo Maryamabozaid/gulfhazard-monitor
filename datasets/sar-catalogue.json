@@ -1,0 +1,242 @@
+{
+  "S1D_IW_GRDH_1SDV_20261124T023056_20261124T023121_005603_00ABCF_E99B": {
+    "id": "S1D_IW_GRDH_1SDV_20261124T023056_20261124T023121_005603_00ABCF",
+    "tiles": [
+      "https://planetarycomputer.microsoft.com/api/data/v1/item/tiles/WebMercatorQuad/{z}/{x}/{y}@1x.png?collection=sentinel-1-grd&item=S1D_IW_GRDH_1SDV_20261124T023056_20261124T023121_005603_00ABCF&assets=vv&assets=vh&expression=vv;vh;vv%2Fvh&rescale=0,600&rescale=0,270&rescale=0,9&asset_as_band=True&format=png"
+    ],
+    "bounds": [
+      49.965149,
+      25.489868,
+      52.80908199999999,
+      27.415249
+    ],
+    "time": "2026-11-24T02:31:09.251741Z",
+    "source": "Microsoft Planetary Computer · sentinel-1-grd",
+    "url": "https://planetarycomputer.microsoft.com/explore?collection=sentinel-1-grd&item=S1D_IW_GRDH_1SDV_20261124T023056_20261124T023121_005603_00ABCF",
+    "metadataRetrievedAt": "2026-11-24T09:04:12.501Z"
+  },
+  "S1D_IW_GRDH_1SDV_20261123T142415_20261123T142440_005596_00AB95_E35B": {
+    "id": "S1D_IW_GRDH_1SDV_20261123T142415_20261123T142440_005596_00AB95",
+    "tiles": [
+      "https://planetarycomputer.microsoft.com/api/data/v1/item/tiles/WebMercatorQuad/{z}/{x}/{y}@1x.png?collection=sentinel-1-grd&item=S1D_IW_GRDH_1SDV_20261123T142415_20261123T142440_005596_00AB95&assets=vv&assets=vh&expression=vv;vh;vv%2Fvh&rescale=0,600&rescale=0,270&rescale=0,9&asset_as_band=True&format=png"
+    ],
+    "bounds": [
+      53.660133,
+      24.468531,
+      56.493701999999985,
+      26.398468
+    ],
+    "time": "2026-11-23T14:24:28.095695Z",
+    "source": "Microsoft Planetary Computer · sentinel-1-grd",
+    "url": "https://planetarycomputer.microsoft.com/explore?collection=sentinel-1-grd&item=S1D_IW_GRDH_1SDV_20261123T142415_20261123T142440_005596_00AB95",
+    "metadataRetrievedAt": "2026-11-24T09:04:12.838Z"
+  },
+  "S1C_IW_GRDH_1SDV_20261123T023857_20261123T023933_010458_014E6E_9086": {
+    "id": "S1C_IW_GRDH_1SDV_20261123T023857_20261123T023933_010458_014E6E",
+    "tiles": [
+      "https://planetarycomputer.microsoft.com/api/data/v1/item/tiles/WebMercatorQuad/{z}/{x}/{y}@1x.png?collection=sentinel-1-grd&item=S1C_IW_GRDH_1SDV_20261123T023857_20261123T023933_010458_014E6E&assets=vv&assets=vh&expression=vv;vh;vv%2Fvh&rescale=0,600&rescale=0,270&rescale=0,9&asset_as_band=True&format=png"
+    ],
+    "bounds": [
+      47.814235999999994,
+      24.812862,
+      50.74974399999999,
+      27.40729
+    ],
+    "time": "2026-11-23T02:39:15.677625Z",
+    "source": "Microsoft Planetary Computer · sentinel-1-grd",
+    "url": "https://planetarycomputer.microsoft.com/explore?collection=sentinel-1-grd&item=S1C_IW_GRDH_1SDV_20261123T023857_20261123T023933_010458_014E6E",
+    "metadataRetrievedAt": "2026-11-24T09:04:13.018Z"
+  },
+  "S1C_IW_GRDH_1SDV_20261123T023832_20261123T023857_010458_014E6E_31DA": {
+    "id": "S1C_IW_GRDH_1SDV_20261123T023832_20261123T023857_010458_014E6E",
+    "tiles": [
+      "https://planetarycomputer.microsoft.com/api/data/v1/item/tiles/WebMercatorQuad/{z}/{x}/{y}@1x.png?collection=sentinel-1-grd&item=S1C_IW_GRDH_1SDV_20261123T023832_20261123T023857_010458_014E6E&assets=vv&assets=vh&expression=vv;vh;vv%2Fvh&rescale=0,600&rescale=0,270&rescale=0,9&asset_as_band=True&format=png"
+    ],
+    "bounds": [
+      48.24245100000002,
+      26.997099,
+      51.08037200000001,
+      28.912569
+    ],
+    "time": "2026-11-23T02:38:45.073732Z",
+    "source": "Microsoft Planetary Computer · sentinel-1-grd",
+    "url": "https://planetarycomputer.microsoft.com/explore?collection=sentinel-1-grd&item=S1C_IW_GRDH_1SDV_20261123T023832_20261123T023857_010458_014E6E",
+    "metadataRetrievedAt": "2026-11-24T09:04:14.392Z"
+  },
+  "S1D_IW_GRDH_1SDV_20261122T024650_20261122T024719_005574_00AAD0_EE66": {
+    "id": "S1D_IW_GRDH_1SDV_20261122T024650_20261122T024719_005574_00AAD0",
+    "tiles": [
+      "https://planetarycomputer.microsoft.com/api/data/v1/item/tiles/WebMercatorQuad/{z}/{x}/{y}@1x.png?collection=sentinel-1-grd&item=S1D_IW_GRDH_1SDV_20261122T024650_20261122T024719_005574_00AAD0&assets=vv&assets=vh&expression=vv;vh;vv%2Fvh&rescale=0,600&rescale=0,270&rescale=0,9&asset_as_band=True&format=png"
+    ],
+    "bounds": [
+      46.18814499999999,
+      27.266102,
+      49.130337,
+      29.424034
+    ],
+    "time": "2026-11-22T02:47:05.446635Z",
+    "source": "Microsoft Planetary Computer · sentinel-1-grd",
+    "url": "https://planetarycomputer.microsoft.com/explore?collection=sentinel-1-grd&item=S1D_IW_GRDH_1SDV_20261122T024650_20261122T024719_005574_00AAD0",
+    "metadataRetrievedAt": "2026-11-24T09:04:14.820Z"
+  },
+  "S1C_IW_GRDH_1SDV_20261123T023803_20261123T023832_010458_014E6E_91A0": {
+    "id": "S1C_IW_GRDH_1SDV_20261123T023803_20261123T023832_010458_014E6E",
+    "tiles": [
+      "https://planetarycomputer.microsoft.com/api/data/v1/item/tiles/WebMercatorQuad/{z}/{x}/{y}@1x.png?collection=sentinel-1-grd&item=S1C_IW_GRDH_1SDV_20261123T023803_20261123T023832_010458_014E6E&assets=vv&assets=vh&expression=vv;vh;vv%2Fvh&rescale=0,600&rescale=0,270&rescale=0,9&asset_as_band=True&format=png"
+    ],
+    "bounds": [
+      48.536045,
+      28.504978,
+      51.45755,
+      30.677464
+    ],
+    "time": "2026-11-23T02:38:17.931513Z",
+    "source": "Microsoft Planetary Computer · sentinel-1-grd",
+    "url": "https://planetarycomputer.microsoft.com/explore?collection=sentinel-1-grd&item=S1C_IW_GRDH_1SDV_20261123T023803_20261123T023832_010458_014E6E",
+    "metadataRetrievedAt": "2026-11-24T09:04:14.980Z"
+  },
+  "S1D_IW_GRDH_1SDV_20261120T030643_20261120T030708_005545_00A9D6_C4AC": {
+    "id": "S1D_IW_GRDH_1SDV_20261120T030643_20261120T030708_005545_00A9D6",
+    "tiles": [
+      "https://planetarycomputer.microsoft.com/api/data/v1/item/tiles/WebMercatorQuad/{z}/{x}/{y}@1x.png?collection=sentinel-1-grd&item=S1D_IW_GRDH_1SDV_20261120T030643_20261120T030708_005545_00A9D6&assets=vv&assets=vh&expression=vv;vh;vv%2Fvh&rescale=0,600&rescale=0,270&rescale=0,9&asset_as_band=True&format=png"
+    ],
+    "bounds": [
+      39.78447700000001,
+      15.137113,
+      42.397976,
+      17.079407
+    ],
+    "time": "2026-11-20T03:06:55.650902Z",
+    "source": "Microsoft Planetary Computer · sentinel-1-grd",
+    "url": "https://planetarycomputer.microsoft.com/explore?collection=sentinel-1-grd&item=S1D_IW_GRDH_1SDV_20261120T030643_20261120T030708_005545_00A9D6",
+    "metadataRetrievedAt": "2026-11-24T09:04:16.731Z"
+  },
+  "S1C_IW_GRDH_1SDV_20261120T144922_20261120T144947_010422_014D43_1CDC": {
+    "id": "S1C_IW_GRDH_1SDV_20261120T144922_20261120T144947_010422_014D43",
+    "tiles": [
+      "https://planetarycomputer.microsoft.com/api/data/v1/item/tiles/WebMercatorQuad/{z}/{x}/{y}@1x.png?collection=sentinel-1-grd&item=S1C_IW_GRDH_1SDV_20261120T144922_20261120T144947_010422_014D43&assets=vv&assets=vh&expression=vv;vh;vv%2Fvh&rescale=0,600&rescale=0,270&rescale=0,9&asset_as_band=True&format=png"
+    ],
+    "bounds": [
+      46.99363299999999,
+      26.787827,
+      49.82860199999999,
+      28.703802
+    ],
+    "time": "2026-11-20T14:49:34.785265Z",
+    "source": "Microsoft Planetary Computer · sentinel-1-grd",
+    "url": "https://planetarycomputer.microsoft.com/explore?collection=sentinel-1-grd&item=S1C_IW_GRDH_1SDV_20261120T144922_20261120T144947_010422_014D43",
+    "metadataRetrievedAt": "2026-11-24T09:04:16.741Z"
+  },
+  "S1C_IW_GRDH_1SDV_20261120T144947_20261120T145017_010422_014D43_612C": {
+    "id": "S1C_IW_GRDH_1SDV_20261120T144947_20261120T145017_010422_014D43",
+    "tiles": [
+      "https://planetarycomputer.microsoft.com/api/data/v1/item/tiles/WebMercatorQuad/{z}/{x}/{y}@1x.png?collection=sentinel-1-grd&item=S1C_IW_GRDH_1SDV_20261120T144947_20261120T145017_010422_014D43&assets=vv&assets=vh&expression=vv;vh;vv%2Fvh&rescale=0,600&rescale=0,270&rescale=0,9&asset_as_band=True&format=png"
+    ],
+    "bounds": [
+      46.580287999999996,
+      28.295626,
+      49.533360000000016,
+      30.55065
+    ],
+    "time": "2026-11-20T14:50:02.629516Z",
+    "source": "Microsoft Planetary Computer · sentinel-1-grd",
+    "url": "https://planetarycomputer.microsoft.com/explore?collection=sentinel-1-grd&item=S1C_IW_GRDH_1SDV_20261120T144947_20261120T145017_010422_014D43",
+    "metadataRetrievedAt": "2026-11-24T09:04:16.996Z"
+  },
+  "S1D_IW_GRDH_1SDV_20261118T141603_20261118T141628_005523_00A90B_5B06": {
+    "id": "S1D_IW_GRDH_1SDV_20261118T141603_20261118T141628_005523_00A90B",
+    "tiles": [
+      "https://planetarycomputer.microsoft.com/api/data/v1/item/tiles/WebMercatorQuad/{z}/{x}/{y}@1x.png?collection=sentinel-1-grd&item=S1D_IW_GRDH_1SDV_20261118T141603_20261118T141628_005523_00A90B&assets=vv&assets=vh&expression=vv;vh;vv%2Fvh&rescale=0,600&rescale=0,270&rescale=0,9&asset_as_band=True&format=png"
+    ],
+    "bounds": [
+      55.693836000000005,
+      24.581345,
+      58.53731500000001,
+      26.510517
+    ],
+    "time": "2026-11-18T14:16:16.277347Z",
+    "source": "Microsoft Planetary Computer · sentinel-1-grd",
+    "url": "https://planetarycomputer.microsoft.com/explore?collection=sentinel-1-grd&item=S1D_IW_GRDH_1SDV_20261118T141603_20261118T141628_005523_00A90B",
+    "metadataRetrievedAt": "2026-11-24T09:04:18.974Z"
+  },
+  "S1D_IW_GRDH_1SDV_20261118T141538_20261118T141603_005523_00A90B_82BD": {
+    "id": "S1D_IW_GRDH_1SDV_20261118T141538_20261118T141603_005523_00A90B",
+    "tiles": [
+      "https://planetarycomputer.microsoft.com/api/data/v1/item/tiles/WebMercatorQuad/{z}/{x}/{y}@1x.png?collection=sentinel-1-grd&item=S1D_IW_GRDH_1SDV_20261118T141538_20261118T141603_005523_00A90B&assets=vv&assets=vh&expression=vv;vh;vv%2Fvh&rescale=0,600&rescale=0,270&rescale=0,9&asset_as_band=True&format=png"
+    ],
+    "bounds": [
+      56.02434499999998,
+      23.07316,
+      58.835148000000004,
+      25.005465
+    ],
+    "time": "2026-11-18T14:15:51.277241Z",
+    "source": "Microsoft Planetary Computer · sentinel-1-grd",
+    "url": "https://planetarycomputer.microsoft.com/explore?collection=sentinel-1-grd&item=S1D_IW_GRDH_1SDV_20261118T141538_20261118T141603_005523_00A90B",
+    "metadataRetrievedAt": "2026-11-24T09:04:18.974Z"
+  },
+  "S1C_IW_GRDH_1SDV_20261119T154647_20261119T154712_010408_014CCB_5FAF": {
+    "id": "S1C_IW_GRDH_1SDV_20261119T154647_20261119T154712_010408_014CCB",
+    "tiles": [
+      "https://planetarycomputer.microsoft.com/api/data/v1/item/tiles/WebMercatorQuad/{z}/{x}/{y}@1x.png?collection=sentinel-1-grd&item=S1C_IW_GRDH_1SDV_20261119T154647_20261119T154712_010408_014CCB&assets=vv&assets=vh&expression=vv;vh;vv%2Fvh&rescale=0,600&rescale=0,270&rescale=0,9&asset_as_band=True&format=png"
+    ],
+    "bounds": [
+      32.733261,
+      26.14172,
+      35.683047999999985,
+      28.078478
+    ],
+    "time": "2026-11-19T15:47:00.045680Z",
+    "source": "Microsoft Planetary Computer · sentinel-1-grd",
+    "url": "https://planetarycomputer.microsoft.com/explore?collection=sentinel-1-grd&item=S1C_IW_GRDH_1SDV_20261119T154647_20261119T154712_010408_014CCB",
+    "metadataRetrievedAt": "2026-11-24T09:04:18.975Z"
+  },
+  "S1D_IW_GRDH_1SDV_20261118T032202_20261118T032231_005516_00A8D0_1F61": {
+    "id": "S1D_IW_GRDH_1SDV_20261118T032202_20261118T032231_005516_00A8D0",
+    "tiles": [
+      "https://planetarycomputer.microsoft.com/api/data/v1/item/tiles/WebMercatorQuad/{z}/{x}/{y}@1x.png?collection=sentinel-1-grd&item=S1D_IW_GRDH_1SDV_20261118T032202_20261118T032231_005516_00A8D0&assets=vv&assets=vh&expression=vv;vh;vv%2Fvh&rescale=0,600&rescale=0,270&rescale=0,9&asset_as_band=True&format=png"
+    ],
+    "bounds": [
+      36.41937300000001,
+      18.997822,
+      39.142841000000004,
+      21.18936
+    ],
+    "time": "2026-11-18T03:22:16.937875Z",
+    "source": "Microsoft Planetary Computer · sentinel-1-grd",
+    "url": "https://planetarycomputer.microsoft.com/explore?collection=sentinel-1-grd&item=S1D_IW_GRDH_1SDV_20261118T032202_20261118T032231_005516_00A8D0",
+    "metadataRetrievedAt": "2026-11-24T09:04:20.855Z"
+  },
+  "S1C_IW_GRDH_1SDV_20261118T023033_20261118T023058_010385_014C05_00DE": {
+    "id": "S1C_IW_GRDH_1SDV_20261118T023033_20261118T023058_010385_014C05",
+    "tiles": [
+      "https://planetarycomputer.microsoft.com/api/data/v1/item/tiles/WebMercatorQuad/{z}/{x}/{y}@1x.png?collection=sentinel-1-grd&item=S1C_IW_GRDH_1SDV_20261118T023033_20261118T023058_010385_014C05&assets=vv&assets=vh&expression=vv;vh;vv%2Fvh&rescale=0,600&rescale=0,270&rescale=0,9&asset_as_band=True&format=png"
+    ],
+    "bounds": [
+      50.129925000000014,
+      26.105011,
+      52.93657300000001,
+      28.023705
+    ],
+    "time": "2026-11-18T02:30:46.044362Z",
+    "source": "Microsoft Planetary Computer · sentinel-1-grd",
+    "url": "https://planetarycomputer.microsoft.com/explore?collection=sentinel-1-grd&item=S1C_IW_GRDH_1SDV_20261118T023033_20261118T023058_010385_014C05",
+    "metadataRetrievedAt": "2026-11-24T09:04:20.980Z"
+  },
+  "S1C_IW_GRDH_1SDV_20261117T142351_20261117T142421_010378_014BC2_8CFC": {
+    "id": "S1C_IW_GRDH_1SDV_20261117T142351_20261117T142421_010378_014BC2",
+    "tiles": [
+      "https://planetarycomputer.microsoft.com/api/data/v1/item/tiles/WebMercatorQuad/{z}/{x}/{y}@1x.png?collection=sentinel-1-grd&item=S1C_IW_GRDH_1SDV_20261117T142351_20261117T142421_010378_014BC2&assets=vv&assets=vh&expression=vv;vh;vv%2Fvh&rescale=0,600&rescale=0,270&rescale=0,9&asset_as_band=True&format=png"
+    ],
+    "bounds": [
+      53.75051500000001,
+      23.826056,
+      56.565533000000016,
+      26.005142
+    ],
+    "time": "2026-11-17T14:24:06.537269Z",
+    "source": "Microsoft Planetary Computer · sentinel-1-grd",
+    "url": "https://planetarycomputer.microsoft.com/explore?collection=sentinel-1-grd&item=S1C_IW_GRDH_1SDV_20261117T142351_20261117T142421_010378_014BC2",
+    "metadataRetrievedAt": "2026-11-24T09:04:22.097Z"
+  }
+}

@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.env
+data/
+.sites-runtime/
+*.log
+.env.*
+!.env.example
+*.pem
+*.key
+*.sqlite*
+*.zip
+__pycache__/

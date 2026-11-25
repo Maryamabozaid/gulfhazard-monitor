@@ -1,0 +1,35 @@
+services:
+  db:
+    image: postgis/postgis:17-3.5
+    environment:
+      POSTGRES_DB: gulfhazard
+      POSTGRES_USER: gulfhazard
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U gulfhazard -d gulfhazard"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    restart: unless-stopped
+  app:
+    build: .
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      DATABASE_URL: postgresql://gulfhazard@db:5432/gulfhazard
+      PGPASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD}
+      DATA_PROFILE: ${DATA_PROFILE:-commercial}
+      HOST: 0.0.0.0
+      PORT: 5173
+      REQUIRE_LOGIN: "true"
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:5180:5173"
+    restart: unless-stopped
+volumes:
+  pgdata:
