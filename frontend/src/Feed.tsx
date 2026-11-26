@@ -246,7 +246,7 @@ export function Feed({
                       ? p.country === "Offshore"
                         ? t("Offshore slick", "بقعة بحرية")
                         : p.country || t("Potential slick", "بقعة محتملة")
-                      : p.title;
+                      : ar && p.title_ar ? p.title_ar : p.title;
                 const newDay =
                   p.timestamp?.slice(0, 10) !==
                     rows[i - 1]?.f.properties.timestamp?.slice(0, 10) ||

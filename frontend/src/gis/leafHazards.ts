@@ -96,6 +96,20 @@ export function hazardLayer(
   };
   for (const f of rows) {
     if (f.geometry.type === "Point") {
+      if (id === "discharge") {
+        const label = useStore.getState().lang === "ar" && f.properties.title_ar
+          ? f.properties.title_ar : f.properties.title;
+        const marker = iconMarker(lonLat(f.geometry.coordinates), "≈", byId[id].color, 21, itemPane, "river-symbol", label, opacity)
+          .on("click", () => select(f)).addTo(shapes);
+        marker.getElement()?.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            event.stopPropagation();
+            select(f);
+          }
+        });
+        continue;
+      }
       points.push(f as Feature<Point, RecordProps>);
     } else {
       const color = colorFor(id, f.properties);
@@ -204,7 +218,7 @@ export function hazardLayer(
     }
   }
   draw();
-  map.on("moveend", draw);
+  if (points.length) map.on("moveend", draw);
   return () => {
     map.off("moveend", draw);
     shapes.remove();

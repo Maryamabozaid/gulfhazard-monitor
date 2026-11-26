@@ -1,0 +1,18 @@
+{
+  "source": "GeoNames Saudi Arabia gazetteer, hydrographic features classified WAD",
+  "url": "https://download.geonames.org/export/dump/SA.zip",
+  "license": "CC BY 4.0",
+  "sites": [
+    {"id":105781,"name":"Wadi Hanifah","ar":"وادي حنيفة","latitude":24.38848,"longitude":46.82458},
+    {"id":102817,"name":"Wadi ar Rimah","ar":"وادي الرمة","latitude":26.3254,"longitude":44.12552},
+    {"id":106684,"name":"Wadi Fatimah","ar":"وادي فاطمة","latitude":21.25527,"longitude":39.28261},
+    {"id":100574,"name":"Wadi Wajj","ar":"وادي وج","latitude":21.46571,"longitude":40.62538},
+    {"id":100254,"name":"Wadi Jazan","ar":"وادي جازان","latitude":16.96043,"longitude":42.5782},
+    {"id":103626,"name":"Wadi Najran","ar":"وادي نجران","latitude":17.63661,"longitude":44.95951},
+    {"id":107388,"name":"Wadi Bishah","ar":"وادي بيشة","latitude":21.31643,"longitude":43.53708},
+    {"id":107051,"name":"Wadi ad Dawasir","ar":"وادي الدواسر","latitude":20.39889,"longitude":46.47889},
+    {"id":11781112,"name":"Wadi al Batin","ar":"وادي الباطن","latitude":27.69952,"longitude":44.99612},
+    {"id":103462,"name":"Wadi al Hamd (Madinah Region)","ar":"وادي الحمض (منطقة المدينة المنورة)","latitude":24.63611,"longitude":39.31778},
+    {"id":414083,"name":"Wadi al Hamd (Tabuk Region)","ar":"وادي الحمض (منطقة تبوك)","latitude":28.53524,"longitude":34.97814}
+  ]
+}

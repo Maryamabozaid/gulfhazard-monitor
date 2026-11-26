@@ -554,7 +554,7 @@ export function GlMapView(props: Props) {
                       7,
                       13,
                     ]
-                  : 4,
+                  : layer === "discharge" ? 8 : 4,
               "circle-stroke-color": "#fff8f0",
               "circle-stroke-width": 1.1,
               "circle-opacity": opacity,
@@ -682,6 +682,11 @@ export function GlMapView(props: Props) {
             "line-dasharray": [3, 2],
           },
         });
+      }
+      if (active.includes("discharge")) {
+        map.moveLayer("hz-discharge-dot");
+        map.moveLayer("draw-fill");
+        map.moveLayer("draw-line");
       }
     }
   }, [

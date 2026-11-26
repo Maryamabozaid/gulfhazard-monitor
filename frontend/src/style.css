@@ -1812,6 +1812,12 @@ dd {
   color: var(--symbol-color); font-size: 17px; line-height: 1;
   transform: rotate(var(--heading)); -webkit-text-stroke: 2px #fffcf3; paint-order: stroke fill;
 }
+.river-symbol > span {
+  border: 2px solid white; border-radius: 50%; background: var(--symbol-color);
+  color: white; font-size: 19px; box-shadow: 0 1px 3px #163f5290;
+}
+.river-sites { padding: 4px 0 8px 0; color: var(--muted); }
+.river-sites button { display: inline-flex; align-items: center; gap: 5px; padding: 4px 7px; color: var(--ink); font-size: 12px; text-decoration: underline; }
 @media (prefers-reduced-motion: no-preference) {
   .recent-quake { animation: quake-outline 1.7s ease-out infinite; }
   @keyframes quake-outline { 50% { stroke-width: 4; stroke-opacity: .6; } }

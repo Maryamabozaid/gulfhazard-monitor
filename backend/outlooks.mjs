@@ -32,21 +32,31 @@ for (const f of riverFile.features) {
   ).filter(inside);
   if (v.length) rivers.set(name, v[Math.floor(v.length / 2)]);
 }
+const saudiWadis = JSON.parse(await readFile(new URL("../datasets/saudi-wadis.json", import.meta.url), "utf8")).sites;
+const dischargeSites = [
+  ...Array.from(rivers, ([name, [longitude, latitude]]) => ({ name, latitude, longitude })),
+  ...saudiWadis,
+];
 export async function discharge(start, end) {
-  const values = [...rivers.values()],
-    current = end === day(Date.now());
+  const current = end === day(Date.now());
   const dateQuery = current
     ? { forecast_days: 7 }
-    : { start_date: end, end_date: end };
+    : { start_date: start, end_date: end };
   const url = params("https://flood-api.open-meteo.com/v1/flood", {
-    latitude: values.map((p) => p[1]).join(","),
-    longitude: values.map((p) => p[0]).join(","),
+    latitude: dischargeSites.map((s) => s.latitude).join(","),
+    longitude: dischargeSites.map((s) => s.longitude).join(","),
+    cell_selection: "nearest",
     daily: "river_discharge",
     ...dateQuery,
   });
   const list = await json(url),
     features = [];
-  for (const [i, item] of (Array.isArray(list) ? list : [list]).entries()) {
+  if (!Array.isArray(list)) throw Error("Unexpected Open-Meteo multi-location response.");
+  for (const [i, item] of list.entries()) {
+    const site = dischargeSites[item.location_id ?? i];
+    if (!site || !Number.isFinite(item.longitude) || !Number.isFinite(item.latitude) ||
+        !Array.isArray(item.daily?.time) || !Array.isArray(item.daily.river_discharge))
+      throw Error("Invalid Open-Meteo discharge record.");
     const outlook = item.daily.time
       .map((d, i) => ({
         day: d,
@@ -54,14 +64,17 @@ export async function discharge(start, end) {
       }))
       .filter((d) => d.value !== null);
     if (!outlook.length) continue;
-    const name = [...rivers.keys()][i];
+    const sourceUrl = new URL(url);
+    sourceUrl.searchParams.set("latitude", String(site.latitude));
+    sourceUrl.searchParams.set("longitude", String(site.longitude));
     features.push(
       feature(
         "discharge",
-        name + "-" + end,
+        (site.id || site.name) + "-" + end,
         point(item.longitude, item.latitude),
         {
-          title: name,
+          title: site.name,
+          ...(site.id && {title_ar: site.ar, site_url: "https://www.geonames.org/" + site.id + "/"}),
           severity: Math.max(...outlook.map((d) => d.value)),
           timestamp: null,
           valid_from: outlook[0].day,
@@ -69,12 +82,20 @@ export async function discharge(start, end) {
           outlook,
           units: "m³/s",
           source: "Copernicus GloFAS / Open-Meteo",
-          source_url: url.href,
+          source_url: sourceUrl.href,
         },
       ),
     );
   }
-  return { features };
+  if (!features.length) return { features };
+  const dates = features.flatMap(f => [f.properties.valid_from, f.properties.valid_to]).sort();
+  return {
+    features,
+    coverage: [dates[0], dates.at(-1)],
+    partial: features.length < dischargeSites.length
+      ? "Open-Meteo returned discharge for " + features.length + " of " + dischargeSites.length + " sampled sites."
+      : "",
+  };
 }
 export async function stations(start, end) {
   const key = process.env.OPENAQ_API_KEY;

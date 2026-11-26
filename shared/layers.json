@@ -180,10 +180,10 @@
   },
   {
     "id": "discharge",
-    "name": "River discharge outlook",
-    "ar": "توقعات تصريف الأنهار",
+    "name": "River and wadi discharge",
+    "ar": "تصريف الأنهار والأودية",
     "source": "Copernicus GloFAS / Open-Meteo",
-    "color": "#4588ab",
+    "color": "#176588",
     "ttl": 21600,
     "metric": "Peak modelled discharge (m³/s)",
     "metricAr": "ذروة التصريف النموذجي (م³/ث)",

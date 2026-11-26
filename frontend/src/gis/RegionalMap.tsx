@@ -225,7 +225,7 @@ export function RegionalMap(props: Props) {
       pane(
         m,
         "hazard-" + l.id,
-        l.id === "earthquakes"
+        l.id === "discharge" ? 553 : l.id === "earthquakes"
           ? 552
           : l.id === "oil"
             ? 551
@@ -421,6 +421,7 @@ export function RegionalMap(props: Props) {
     props.groups,
     state.active,
     state.settings,
+    state.lang,
     compare,
     state.compareHazards,
   ]);

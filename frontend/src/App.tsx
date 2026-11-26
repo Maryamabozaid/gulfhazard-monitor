@@ -1,5 +1,5 @@
 import { imageryNote } from "./autoImagery";
-import { useState, useEffect, useMemo, useRef } from "react";
+import { Fragment, useState, useEffect, useMemo, useRef } from "react";
 import {
   Activity,
   ChevronDown,
@@ -46,10 +46,12 @@ import {
   measureText,
   type Hazard,
   type Tool,
+  collection,
 } from "./model";
+import type { Bounds } from "./gis/placeFilter";
 import { Icon } from "./icons";
 import { MapView, type MapApi } from "./gis/MapView";
-import { Feed } from "./Feed";
+import { Feed, statusLabel } from "./Feed";
 import { Timeline } from "./Timeline";
 import { providerFor } from "./compareImagery";
 import {AccountButton} from "./Accounts";
@@ -205,6 +207,13 @@ export default function App() {
       ...(window.innerWidth < 820 ? { feed: false } : {}),
     });
     if (api.current) api.current.focus(f);
+  };
+  const riverSites = groups.discharge || [];
+  const showRiverSites = () => {
+    if (!api.current || !riverSites.length) return;
+    setMore(false);
+    if (riverSites.length === 1) api.current.focus(riverSites[0]);
+    else api.current.fitArea(bbox(collection(riverSites)) as Bounds);
   };
   const openSettings = (id: string) => {
     setMore(false);
@@ -536,7 +545,8 @@ export default function App() {
               </div>
               <div className="more-scroll">
                 {layers.slice(3).map((l) => (
-                  <div className="layerrow" key={l.id}>
+                  <Fragment key={l.id}>
+                  <div className="layerrow">
                     <Icon name={l.id} size={17} style={{ color: l.color }} />
                     <label title={s.restrictions[l.id]}>
                       <input
@@ -563,6 +573,18 @@ export default function App() {
                       <SlidersHorizontal size={14} />
                     </button>
                   </div>
+                  {l.id === "discharge" && s.active.includes(l.id) && !compare && (
+                    <div className="river-sites" aria-live="polite">
+                      {riverSites.length ? <button onClick={showRiverSites} disabled={!mapApi}>
+                        <LocateFixed size={15}/>{t("Show sites on map", "عرض المواقع على الخريطة")} ({fmt(riverSites.length, ar)})
+                      </button> : <small>{!data.discharge || ["loading","error","setup","refreshing"].includes(data.discharge.status)
+                        ? "Open-Meteo · " + statusLabel(data.discharge?.status || "loading", ar)
+                        : data.discharge.features.length
+                          ? t("No discharge sites match the current filters.", "لا توجد مواقع تصريف تطابق الفلاتر الحالية.")
+                          : t("Open-Meteo returned no discharge values for this period.", "لم يُرجع Open-Meteo قيماً للتصريف في هذه الفترة.")}</small>}
+                    </div>
+                  )}
+                  </Fragment>
                 ))}
               </div>
             </div>
@@ -647,8 +669,8 @@ function EventDetail({ f, api }: { f: Hazard; api: MapApi | null }) {
   const fields = [
     [t("Source", "المصدر"), p.source],
     [
-      t("Acquired (UTC)", "وقت الرصد (UTC)"),
-      p.timestamp
+      p.type === "discharge" ? t("Model period (UTC)", "فترة النموذج (UTC)") : t("Acquired (UTC)", "وقت الرصد (UTC)"),
+      p.type === "discharge" && p.valid_from && p.valid_to ? p.valid_from + " – " + p.valid_to : p.timestamp
         ? dateText(p.timestamp, ar, true)
         : t("Inventory / model edition", "إصدار الجرد أو النموذج"),
     ],
@@ -695,7 +717,7 @@ function EventDetail({ f, api }: { f: Hazard; api: MapApi | null }) {
         </button>
       </div>
       <div className="stack panel-body">
-        <h3>{p.title}</h3>
+        <h3>{ar && p.title_ar ? p.title_ar : p.title}</h3>
         <dl>
           {fields.map(([k, v], i) => (
             <div key={i}>
@@ -721,6 +743,11 @@ function EventDetail({ f, api }: { f: Hazard; api: MapApi | null }) {
           </small>
         )}
         {p.outlook && (
+          <>
+          <small>{t("Daily model estimate for the nearby 5 km grid cell. Local flash flooding can occur even when modelled discharge is zero.", "تقدير يومي لخلية النموذج القريبة بدقة نحو ٥ كم. قد يحدث سيل محلي حتى لو كانت قيمة التصريف في النموذج صفراً.")}</small>
+          {p.site_url && <a className="source-link" href={p.site_url} target="_blank" rel="noreferrer">
+            {t("Wadi location · GeoNames", "موقع الوادي · GeoNames")} <ExternalLink size={13}/>
+          </a>}
           <details>
             <summary>{t("Modelled discharge", "التصريف النموذجي")}</summary>
             {p.outlook.map((v: any) => (
@@ -730,6 +757,7 @@ function EventDetail({ f, api }: { f: Hazard; api: MapApi | null }) {
               </div>
             ))}
           </details>
+          </>
         )}
         {p.type === "volcanoes" && (
           <>

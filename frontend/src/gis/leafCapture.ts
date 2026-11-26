@@ -83,8 +83,7 @@ export async function captureMap(
         if (badge) {
           const style = getComputedStyle(badge);
           ctx.translate(x + rect.width / 2, y + rect.height / 2);
-          const cluster = el.classList.contains("cluster-symbol");
-          if (cluster) {
+          if (el.matches(".cluster-symbol, .river-symbol")) {
             ctx.beginPath();
             ctx.arc(0, 0, rect.width / 2 - 1, 0, Math.PI * 2);
             ctx.fillStyle = style.backgroundColor;

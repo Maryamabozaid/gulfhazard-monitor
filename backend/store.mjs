@@ -142,7 +142,8 @@ export async function getLayer(id, start, end, background = false) {
   if (!def || !validateWindow(start, end))
     throw Error("Invalid layer or date window.");
   if (restriction(id)) return {type:"FeatureCollection",features:[],provider:def.source,lastSuccess:null,status:"setup",coverage:[start,end],message:"Unavailable in the commercial distribution: "+restriction(id)};
-  const key = [profile, id, start, end].join("|");
+  // Discharge responses cached before the Saudi wadi sites were added cover fewer locations.
+  const key = [profile, id === "discharge" ? "discharge-v2" : id, start, end].join("|");
   const row = await first("SELECT at,data FROM responses WHERE key=$1",[key]);
   const prior = row ? JSON.parse(gunzipSync(row.data)) : null;
   if(prior && id==="fires")for(const f of prior.features)if(f.properties.industrial_reason===undefined)f.properties.industrial_reason=industrialReason(...f.geometry.coordinates);
